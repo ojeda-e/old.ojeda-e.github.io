@@ -1,16 +1,13 @@
 ---
 title:  "Bonjour/Hello Univers(e)!"
-header:
-  teaser: "/assets/images/500x300.png"
 categories:
   - Blog
 tags:
   - Random
 ---
 
-Cheers from Canada.
+Bonjour/hello everyone!
+This is my first post. In the next month I expect to share my experience as a Google Summer of Code intern.
 
-
-
-
+Cheers from Canada. 
 
