@@ -2,6 +2,7 @@
 permalink: /blog/
 title: "Blog Posts"
 excerpt: "some stories to share"
+layout: posts
 layouts_gallery:
   - url: /assets/images/mm-layout-splash.png
     image_path: /assets/images/mm-layout-splash.png
