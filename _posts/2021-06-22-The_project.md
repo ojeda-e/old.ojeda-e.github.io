@@ -52,35 +52,40 @@ width="1000"/>
 If you are in the MD simulations field and you work with any protein-membrane or
 membrane-only system, this tool will help your research work! Findings reported
 in literature suggest that there is an interplay between membrane curvature and
-protein sorting [[1]] [[2]] [[3]] and/or protein function [[4]][[5]]. Although this complex
-interaction may be determined by the specific features of the membrane (lipid
-type, lipid composition) or the protein (protein shape, type of residues facing
-the membrane, protein conformation), curvature of biological membranes can
-provide valuable insight when addressing a research problem.
+protein sorting [[1]] [[2]] [[3]] and/or protein function [[4]][[5]]. Although
+this complex interaction may be determined by the specific features of the
+membrane (lipid type, lipid composition) or the protein (protein shape, type of
+residues facing the membrane, protein conformation), curvature of biological
+membranes can provide valuable insight when addressing a research problem.
 
 -   When and where will I find the `membrane_curvature` tool? 
 
-    The membrane curvature tool is expected to be part of the MDAnalysis
-    analysis package in future versions of MDAnalysis. A sample of how it is
-    expected to work in the future looks like this
+The membrane curvature tool is expected to be part of the MDAnalysis
+analysis package in future versions of MDAnalysis. A sample of how it is
+expected to work in the future looks like this
 
 ```
-    import MDAnalysis as mda
+import MDAnalysis as mda
+import MDAnalysis as mda
+from MDAnalysis.analysis.curvature import Curvature
 
-    atom_file = <your coordinates file from MD simulations>
-    traj_file = <your trajectory from MD simulations>
+atom_file = <your coordinates file from MD simulations>
+traj_file = <your trajectory from MD simulations>
 
-    u = mda.Universe(atom_file, traj_file)
+u = mda.Universe(atom_file, traj_file)
 
-    # The surface is derived from this selection
-    atoms_of_reference = u.select_atoms("<atoms of reference>")
-    
-    mean_curvature = curvature.mean(atoms_of reference)
-    gaussian_curvature = curvature.gaussian(atoms_of reference)
+surface = u.select_atoms("<atoms of reference>")
+
+curvature = Curvature(surface).run()
+
+mean = curvature.mean_curvature()
+gaussian = curvature.gaussian_curvature()
 ```
 
-- What are the limitations to calculate membrane curvature? When calculating
-  membrane curvature in MD simulations, there are two main limitations.
+- What are the limitations to calculate membrane curvature? 
+
+When calculating membrane curvature in MD simulations, there are two main
+limitations.
 
 The first one is sampling. To properly sample a decent range of curvatures in
 MD, the required simulation times are very large, reaching dozens or hundreds of
@@ -128,7 +133,7 @@ References:
 ---
 
 [GSoC]: https://summerofcode.withgoogle.com
-[my_project]: https://summerofcode.withgoogle.com/projects/#5098282306502656
+[my project]: https://summerofcode.withgoogle.com/projects/#5098282306502656
 [MDAnalysis]: https://github.com/MDAnalysis
 [donating]: https://numfocus.org/donate-to-mdanalysis
 [membrane_curvature]: https://github.com/MDAnalysis/membrane-curvature
