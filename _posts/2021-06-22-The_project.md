@@ -66,7 +66,6 @@ expected to work in the future looks like this
 
 ```
 import MDAnalysis as mda
-import MDAnalysis as mda
 from MDAnalysis.analysis.curvature import Curvature
 
 atom_file = <your coordinates file from MD simulations>
@@ -99,12 +98,12 @@ benchmarks are non-existent, or they have not been ported to the modern Python 3
 environment.
 
 This was, in fact, one of my strongest motivations to contribute a membrane
-curvature tool under the MDAnalysis umbrella. With [membrane_curvature],
+curvature tool under the [MDAnalysis] umbrella. With [membrane_curvature],
 students and researchers will be able to calculate mean and gaussian curvature
 of biological membranes using one of the most popular, easy-to-use, and
 actively-maintained packages for analysis of MD simulations.
 
-I started developing this tool as part of my PhD and I would like to share it
+I started developing this tool as part of my Ph.D. and I would like to share it
 with the wider MD community. I am convinced that by sharing our knowledge and
 open-sourcing our algorithms and tools, science will move forward at a faster
 pace.
