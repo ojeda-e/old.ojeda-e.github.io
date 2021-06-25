@@ -60,8 +60,8 @@ membranes can provide valuable insight when addressing a research problem.
 
 -   When and where will I find the `membrane_curvature` tool? 
 
-The membrane curvature tool is expected to be part of the MDAnalysis
-analysis package in future versions of MDAnalysis. A sample of how it is
+The membrane curvature tool is expected to be part of the [MDAnalysis]
+analysis package in future versions. A sample of how it is
 expected to work in the future looks like this
 
 ```
