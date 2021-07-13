@@ -98,7 +98,7 @@ other members of your team.
 
 For example, when working with lipid bilayers, it is very common to identify
 atoms by lipid type or by atom name. An effective way to ierate over items of
-the `dict_lipid_types` would be
+`dict_lipids_ecoli` would be
 
 
 ```
@@ -117,12 +117,11 @@ Each function should be focused on ONE thing. Avoid unnecessary
 side effects and keep it focused on one single task.
 
 
-- A _code smell_ is a function with more than 3 arguments. In many cases,
-using 3 arguments may be more effective but a good rule of thumb to keep in mind is:
+- A _code smell_ is a function with more than 3 arguments. In many cases, using
+  3 arguments may be more effective but a good rule of thumb to keep in mind is:
 
-**If the function has too many parameters, <br> consider breaking the function into smaller functions.**
-{: .notice}
-{: style="text-align: center;"}
+**If the function has too many parameters, <br> consider breaking the function
+into smaller functions.** {: .notice} {: style="text-align: center;"}
 
 ```
 function_name(param_1, ..., param_10)    # too many! ❌
@@ -165,7 +164,7 @@ useful cases for Atom selection using [MDAnalysis] are available in this
 
 In summary, the advantages of writing clean and modular code, in addition to
 best practices, will take you one step closer to a more readable code, which
-will be easier for your team to understand and maintain. Because simpler code is
+will be easier for your team to understand and maintain. Because simple code is
 better. 
 
 
