@@ -16,7 +16,7 @@ practices.
 
 ## Clean and Modular Code 
 
-The main take home message of my last two weeks working on my [project]
+The main take home message of my last two weeks working on my [GSoC_project]
 can be summarized with a golden rule: write clean and modular code.
 
 
@@ -26,7 +26,7 @@ can be summarized with a golden rule: write clean and modular code.
 {: style="text-align: center;"}
 
 
-Clean code: a characteristic of production quality code that is crucial for collaboration
+Clean code is a characteristic of production quality code that is crucial for collaboration
 and maintainability in software development. Make it easy for the team to
 understand and maintain.
 
@@ -49,7 +49,7 @@ to read, and to reuse, collaborating with members of your teams gets easier and
 faster, speeding up development time.
 
 
-Other tips that I found useful to consider while working on GSoC are summarized below.
+Other tips that I found useful to consider while working at the [GSoC] are summarized below.
 
 ## Names of Variables
 
@@ -170,7 +170,7 @@ better.
 
 
 [GSoC]: https://summerofcode.withgoogle.com
-[project]: https://summerofcode.withgoogle.com/projects/#5098282306502656
+[GSoC_project]: https://summerofcode.withgoogle.com/projects/#5098282306502656
 [MDAnalysis]: https://github.com/MDAnalysis
 [here]: https://www.python.org/dev/peps/pep-0008/?#code-lay-out
 [tutorial]: https://www.mdanalysis.org/MDAnalysisTutorial/basics.html
