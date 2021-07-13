@@ -102,7 +102,7 @@ atoms by lipid type or by atom name. An effective way to ierate over items of
 
 
 ```
-dict_lipids_ecoli = {'PC': 34, 
+dict_lipids_ecoli = {'PE': 34, 
                      'PG': 33, 
                      'CL': 33 }   
 
