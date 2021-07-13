@@ -37,28 +37,19 @@ understand and maintain.
 {: style="text-align: center;"}
 
 
-Modularity: It makes your code more organized, efficient, and reusable. This is something
+Modularity makes your code more organized, efficient, and reusable. This is something
 that may not be evident in your first experiences working on teams, but in the
 long run, it will pay off!
 
 The importance of having clean and modular code can be summarized in three
-points. First, modular code means better readability of the code. Second, by
-having modules, we can reuse code more easily. And third, since it is easy to
-read, and to reuse, collaborating with members of your teams get easier and
+points. First, modular code means better readability because each function will
+be focused on one single purpose. Second, by having modules with a single
+purpose and function, we can reuse code more easily. And third, since it is easy
+to read, and to reuse, collaborating with members of your teams get easier and
 faster, speeding up development time.
 
-However, more modules in your code is not always more effective. There is always
-a balance. 
 
-Imagine we have a trajectory and a coordinates file that we obtained from
-Molecular Dynamics (MD) simulations. All we know is that the file contains a
-complex membrane, and we need to find how many lipid types we have in the
-system, the number of atoms (`n_atoms`) and. The `MDAnalysis` package is
-probably the best option to start exploring the system. 
-
-
-
-Other tips that I found useful to consider while workin on GSoC are summarized below:
+Other tips that I found useful to consider while working on GSoC are summarized below.
 
 ## Names of Variables
 
@@ -66,13 +57,13 @@ Provide descriptive names of variables. Long names are not necessarily
 meaningful names. A good rule of thumb is: 
 
 
-**Explicit variables + clear variable names --> no comments** ✅ <br>
-**Implicit variables + unclear variable names --> needs comments** ❌
+**Descriptive variables + clear variable names --> no comments** ✅ <br>
+**Arbitrary variables + unclear variable names --> needs comments** ❌
 {: .notice}
 {: style="text-align: center;"}
 
--   Avoid single letter names.  (Exceptions can be made based the readers of
-    your code)
+-   Avoid single letter names. Exceptions can be made based on the readers of
+    your code when iterables are involved, but in general try to assign the best name to variables.
 
     ```
     a = [15, 30, 45]        # single letter ❌
@@ -80,7 +71,7 @@ meaningful names. A good rule of thumb is:
     angles = [15, 30, 45]   # descriptive ✅ 
     ```
 
--   Because python is untyped Specify type of variable in the name if possible.
+-   Because python is untyped, specify the type of variable in the name if possible.
 
     ```
     is_in_list = True                 # Boolean Variable
@@ -92,19 +83,32 @@ meaningful names. A good rule of thumb is:
                         'CHOL':5 }    # Dictionary
     ```
 
--   Prefer list comprehensions over explicit lists. 
+-   Prefer list comprehensions over explicit lists when you can create a list from an iterable.
 
 ```
 angle_list = [15, 30, 45, 60, 75, 90]    # explicit list  ❌
 
-angle_list = [i*15 for i in range(1,6)]  # list comprehension  ✅ 
+angle_list = [i*15 for i in range(1,7)]  # list comprehension  ✅ 
 ```
 
-- Concise variable names can be more effective in certain functions.
+- Concise variable names can make code easier and more effective to read.
+
+Concise names are easy to read and names may be even intuitive or common for
+other members of your team. 
+
+For example, when working with lipid bilayers, it is very common to identify
+atoms by lipid type or by atom name. An effective way to ierate over items of
+the `dict_lipid_types` would be
+
 
 ```
-for lipid_type, number in dict_lipid_types.items():
+dict_lipids_ecoli = {'PC': 34, 
+                     'PG': 33, 
+                     'CL': 33 }   
+
+for lipid_type, number in dict_lipids_ecoli.items():
     print(lipid_type, number)
+
 ```
 
 
@@ -113,20 +117,17 @@ Each function should be focused on ONE thing. Avoid unnecessary
 side effects and keep it focused on one single task.
 
 
+- A _code smell_ is a function with more than 3 arguments. In many cases,
+using 3 arguments may be more effective but a good rule of thumb to keep in mind is:
 
-
-- A _code smell_ for functions with more than 3 arguments. Although
-doesn’t apply for 100% of the cases, using 3 arguments may be more
-effective.  A rule of thumb to keep in mind is, 
-
-**If the function has too many parameters, <br> consider to break the function into more modules.**
+**If the function has too many parameters, <br> consider breaking the function into smaller functions.**
 {: .notice}
 {: style="text-align: center;"}
 
 ```
-function_name(param_1, ..., param_10)    # not very good ❌
+function_name(param_1, ..., param_10)    # too many! ❌
 
-function_name(param_1, ..., param_5)     # better ⚠️
+function_name(param_1, ..., param_5)     # a lot, but better ⚠️
 
 function_name(param_1, param_2, param_3) # best ✅ 
 ```
@@ -134,34 +135,42 @@ function_name(param_1, param_2, param_3) # best ✅
 
 
 ## Style Guide
-PEP8 provides guidelines on how to write code in Python. For example,
-- Use whitespace properly and use consistent indentation (4 spaces / indent).
-- Line length should be shorter than 79 characters. 
+PEP8 provides guidelines on how to write code in Python. For example:
 
+- Use whitespace properly, and use consistent indentation (4 spaces / indent).
+- Line length should be shorter than 79 characters to keeping your code human readable. 
+
+Here an example of how select atoms using the [MDAnalysis] package following PEP8 guidelines
 
 ```
-lipid_list_ecoli = ['CL', 'PE', 'PG' ]
-common_lipid_types = ['PC', 'PE', 'PS']
-not_very_common_lipid_types = ['PI', 'TAG', 'PUFA]
+import MDAnalysis as mda
+from MDAnalysis.tests.datafiles import PSF, DCD
 
-for lipid in lipid_list_ecoli:
-    if lipid is in dict_lipid_types.keys() or is in dict_not_very_common_lipid_types.keys():
-        print( lipid )
-        
+u = mda.Universe(PSF, DCD)
+
+# Line with 117 characters long ---> too long ❌
+no_protein_backbone_by_residue = u.select_atoms("resname ALA or resname GLY and not (backbone or name CB)").residues
+
+# Same selection but using a 70-character long  -->  ✅ good
+protein_resids_noBB =  u.select_atoms("resname ALA GLY and not \
+                                     (backbone or name CB)").residues
 ```
-    
-You can find more examples on code lay-out using PEP8 in [here]. For options
-to install Autopep8, this [post]({% post_url 2021-07-12-Autopep8 %}) may
-help.
 
 
-Following the practices here mentioned will take you one step closer to a more
-readable code, which will be easier for your team to understand and maintain. 
+You can find more examples on code layout using PEP8 in [here]. For options to
+install Autopep8, this [post]({% post_url 2021-07-12-Autopep8 %}) may help. More
+useful cases for Atom selection using [MDAnalysis] are available in this
+[tutorial].
 
-In summary, write clean and modular code. Because simpler is better. 
+
+In summary, the advantages of writing clean and modular code, in addition to
+best practices, will take you one step closer to a more readable code, which
+will be easier for your team to understand and maintain. Because simpler code is
+better. 
 
 
 [GSoC]: https://summerofcode.withgoogle.com
 [project]: https://summerofcode.withgoogle.com/projects/#5098282306502656
 [MDAnalysis]: https://github.com/MDAnalysis
 [here]: https://www.python.org/dev/peps/pep-0008/?#code-lay-out
+[tutorial]: https://www.mdanalysis.org/MDAnalysisTutorial/basics.html
