@@ -120,8 +120,9 @@ side effects and keep it focused on one single task.
 - A _code smell_ is a function with more than 3 arguments. In many cases, using
   3 arguments may be more effective, but a good rule of thumb to keep in mind is:
 
-**If the function has too many parameters, <br> consider breaking the function
-into smaller functions.** {: .notice} {: style="text-align: center;"}
+**If the function has too many parameters, <br> consider breaking
+into smaller functions (modules).** 
+{: .notice} {: style="text-align: center;"}
 
 ```
 function_name(param_1, ..., param_10)    # too many! ❌
