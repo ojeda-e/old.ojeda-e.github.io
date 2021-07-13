@@ -45,7 +45,7 @@ The importance of having clean and modular code can be summarized in three
 points. First, modular code means better readability because each function will
 be focused on one single purpose. Second, by having modules with a single
 purpose and function, we can reuse code more easily. And third, since it is easy
-to read, and to reuse, collaborating with members of your teams get easier and
+to read, and to reuse, collaborating with members of your teams gets easier and
 faster, speeding up development time.
 
 
@@ -118,7 +118,7 @@ side effects and keep it focused on one single task.
 
 
 - A _code smell_ is a function with more than 3 arguments. In many cases, using
-  3 arguments may be more effective but a good rule of thumb to keep in mind is:
+  3 arguments may be more effective, but a good rule of thumb to keep in mind is:
 
 **If the function has too many parameters, <br> consider breaking the function
 into smaller functions.** {: .notice} {: style="text-align: center;"}
