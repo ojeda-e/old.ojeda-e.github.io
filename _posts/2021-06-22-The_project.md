@@ -9,8 +9,8 @@ tags:
 ---
 
 It’s been two weeks since I started my Google Summer of Code ([GSoC]) journey and
-before moving forward, I would like to take a moment to share details of [my
-project], the motivations behind it, as well as my expectations. The main goal is
+before moving forward, I would like to take a moment to share details of [my_project], 
+the motivations behind it, as well as my expectations. The main goal is
 to integrate a membrane curvature analysis tool into [MDAnalysis]. This tool will
 enable users to calculate the membrane curvature, in terms of mean and Gaussian
 curvature, of biological membranes.
@@ -132,7 +132,7 @@ References:
 ---
 
 [GSoC]: https://summerofcode.withgoogle.com
-[my project]: https://summerofcode.withgoogle.com/projects/#5098282306502656
+[my_project]: https://summerofcode.withgoogle.com/projects/#5098282306502656
 [MDAnalysis]: https://github.com/MDAnalysis
 [donating]: https://numfocus.org/donate-to-mdanalysis
 [membrane_curvature]: https://github.com/MDAnalysis/membrane-curvature
