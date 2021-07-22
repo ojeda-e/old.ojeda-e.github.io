@@ -22,6 +22,9 @@ with the ability to perform analysis over long time scales while keeping track
 of physico-chemical interactions, makes of MD one of the most popular tools
 across different fields of science and engineering.
 
+<img src = "../../assets/images/saddle.png" alt = "types_setup"
+width = "950"/>
+
 Lipid bilayers play a pivotal role in in biological systems. By providing
 specific biophysical properties, lipids confer structure and unique physical
 properties to the bilayer [[1]]. Such physical properties strongly relate to their
@@ -30,9 +33,6 @@ composition of each cellular membrane has evolved to optimize the functions
 associated with it. This makes of MD simulations of lipid bilayers, in broad
 ranges of lipid composition and size, is one of the most common MD setups in
 biomolecular systems. 
-
-<img src = "../../assets/images/saddle.png" alt = "types_setup"
-width = "950"/>
 
 However, biological membranes are not purely a lipid
 barrier. They also contain up to 50 % protein by mass (up to 50 %!) [[2]] . Membrane
