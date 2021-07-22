@@ -20,8 +20,8 @@ Estefania Barreto-Ojeda was born in Bogotá, Colombia, where she obtained her BS
 Estefania's research interests mix computational tools and statistical analysis to study biological systems with medical and pharmaceutical relevance. One of the main goals of her research is trying to better understand the physics behind the properties of biological membranes. During her Ph.D. Estefania TA courses involving scientific writing and statistical analysis.          
                                        
 
-Estefania is also a data visualization fan and machine learning enthusiast. In 2020, together with [@soerendip](https://github.com/soerendip), they offered the first ML grad course for biologists at The University of Calgary. In the summer of 2021, Estefania will join [Google Summer of Code](https://summerofcode.withgoogle.com) with [MDAnalysis](https://www.mdanalysis.org).  
+Estefania is also a data visualization fan and machine learning enthusiast. In 2020, together with [@soerendip](https://github.com/soerendip), they offered the first ML grad course for biologists at The University of Calgary. In the summer of 2021, Estefania is part of the [Google Summer of Code](https://summerofcode.withgoogle.com) program with [MDAnalysis](https://www.mdanalysis.org) in 2021. Her contribution will come in the form of a tool to calculate membrane curvature from molecular dynamics simulations. Because she wants to make of the world a better place, she's happy to share the code.
 
-In her free time, she improves her sushi-making skills and listens to her vinyl while waiting for the pandemic to be over.
+In her free time, she improves her sushi-making skills and listens to her vinyl while waiting for the pandemic to be over and travel around the world. 
 
-You can find her usually leaning towards the left. 
+You can find her leaning towards the left. 
