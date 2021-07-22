@@ -114,6 +114,8 @@ These considerations have been brought up during the development of the
 group of mentors. In the next post, I will discuss in detail the considerations
 for the systems with proteins diffusing in the membrane.
 
+Stay tuned for the second part!
+
 ---
 
 References:
