@@ -101,11 +101,12 @@ guarantee two important features in our calculation of membrane curvature:
 
 - More atoms of reference in the primary unit cell. In other words, the
   `AtomGroup` of reference used to derive the surface will have more `atoms`,
-  and thefore the surface will be derived from a highger number of points. 
+  and thefore the surface will be derived from a higher number of points. 
 - As a consequence, our grid will be more populated. Less empty cells in the
   grid means we will avoid annoying `np.nans` and our gradients (curvature)
   won't be driven by undefined values.
-  Altogether, we will improve our sampling!
+
+Altogether, we will improve our sampling!
 
 
 These considerations have been brought up during the development of the
