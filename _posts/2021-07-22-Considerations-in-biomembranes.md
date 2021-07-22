@@ -8,7 +8,7 @@ tags:
     - Lipid Bilayers
 ---
 
-Calculating membrane curvature from MD simulations.
+Some points to keep in mind to calculating membrane curvature from MD simulations.
 
 ---------------------------
 

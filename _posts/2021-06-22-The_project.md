@@ -8,6 +8,10 @@ tags:
     - Lipid Bilayers
 ---
 
+A brief introduction to my GSoC project!
+
+---------------------------
+
 It’s been two weeks since I started my Google Summer of Code ([GSoC]) journey and
 before moving forward, I would like to take a moment to share details of [my_project], 
 the motivations behind it, as well as my expectations. The main goal is
