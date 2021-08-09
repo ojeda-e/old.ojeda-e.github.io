@@ -1,5 +1,5 @@
 ---
-title:  "Membrane Curvature from MD Simulations: Considerations. (Part II)"
+title:  "Membrane Curvature from MD Simulations: Considerations (Part II)"
 categories:
     - Blog
 tags:
@@ -9,7 +9,7 @@ tags:
 toc: true
 ---
 
-Considerations to calculate membrane curvature in systems with no position restraints.
+Considerations to calculate membrane curvature from MD simulations with no position restraints.
 
 ---------------------------
 
@@ -55,7 +55,7 @@ width="450"/>
 </center>
 <br>
 Since the scientific question behind calculating membrane curvature in
-membrane-protein systems is: _What is the curvature induced by the protein?_ the
+membrane-protein systems is what is the _membrane curvature induced by the protein_, the
 trajectory obtained as a result of our MD simulations requires some additional
 processing. In this way we guarantee that the calculated curvature is
 relative to the protein, and therefore, can be associated to the curvature
@@ -133,7 +133,7 @@ box, allowing a given AtomGroup to be centered in the unit cell. On the other
 hand, the `fit_rot_trans` transformation enables us to fit the trajectory
 using an AtomGroup as reference. The functionality of `fit_rot_trans` is wide
 enough that we can perfom fit on the plane of the membrane if needed. For
-example,if the fitting is performed on the plane=`xy` then the transformation
+example,if the fitting is performed on the `plane=xy` then the transformation
 will behave as `-fit rotxy+transxy` from _Gromacs_. 
 
 A snippet that includes these two transformations looks like:
