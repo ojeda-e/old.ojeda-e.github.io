@@ -156,6 +156,9 @@ u.trajectory.add_transformations(*workflow_fit)
 
 ```
 
+[This blog post](https://www.mdanalysis.org/2020/03/09/on-the-fly-transformations/)
+has more on-the-fly transformations examples to check out!
+
 Currently, the `compact` option that puts all atoms at the closest distance from
 the center of the box is not available in MDAnalysis, so we need extra steps
 which may include calculation of rotational and translational matrices applied
