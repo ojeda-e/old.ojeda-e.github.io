@@ -187,8 +187,7 @@ of incredibly talented people:
 [@richardjgowers](https://github.com/richardjgowers) and 
 [@tylerreddy](https://github.com/tylerjereddy) from the MDA community, who participated in our
 discussions and provided valuable insights. 
-
-Thanks for all your valuable lessons. 
+<br> Thanks for all your valuable lessons. 
 
 MembraneCurvature has launched! 🚀
 
