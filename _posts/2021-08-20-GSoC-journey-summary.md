@@ -188,7 +188,9 @@ of incredibly talented people:
 [@tylerreddy](https://github.com/tylerjereddy) from the MDA community, who participated in our
 discussions and provided valuable insights. 
 
-Thanks for all your valuable lessons. MembraneCurvature has launched! 🚀
+Thanks for all your valuable lessons. 
+
+MembraneCurvature has launched! 🚀
 
 ---
 [#9]: https://github.com/MDAnalysis/membrane-curvature/pull/9
