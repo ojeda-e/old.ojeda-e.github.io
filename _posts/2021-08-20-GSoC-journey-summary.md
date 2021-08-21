@@ -127,7 +127,7 @@ gaussian_lower_leaflet = curvature_lower_leaflet.results.average_gaussian
 ```
 
 To visualize the results obtained in the analysis shown above, we can use
-contours from matplotlib to get cool plots:
+[contours] from matplotlib to get cool plots like the following:
 
 ```
 from scipy import ndimage
@@ -153,7 +153,7 @@ for ax, mc, lf in zip((ax1, ax2), curvatures, leaflets):
 Currently, we are working on implementing an interpolation as an option for the
 user [#52].
 
-In some situations, when selecting a very high numbers of bins in the grid, or
+In some situations, when selecting a very high number of bins in the grid, or
 when having regions of the grid with low sampling. For example, think of a
 membrane-protein system, where the bins occupied by the protein won't be
 populated by lipids, and therefore, will have a region of undefined values in
@@ -171,7 +171,7 @@ There is always room for improvement, and MembraneCurvature is not an exception.
 ![vesicles](../../assets/images/vesicles.png)
 
 One of the main limitations of the current version of MembraneCurvature is the
-inability to calculate curvature in systems like vesicles, capsids or micelles.
+inability to calculate curvature in systems like vesicles, capsids, or micelles.
 Definitely, this would be a nice improvement for a future release of
 MembraneCurvature! We acknowledge that scientific research would benefit of a
 tool to calculate membrane curvature in these types of systems, so we are
@@ -188,6 +188,7 @@ of incredibly talented people:
 [@tylerreddy](https://github.com/tylerjereddy) from the MDA community, who participated in our
 discussions and provided valuable insights. 
 
+Thanks for all your valuable lessons. MembraneCurvature has launched! 🚀
 
 ---
 [#9]: https://github.com/MDAnalysis/membrane-curvature/pull/9
