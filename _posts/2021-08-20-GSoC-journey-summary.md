@@ -209,7 +209,7 @@ example considered here, the contour plot of mean curvature indicates:
   the corner of the membrane, in particular bottom left and upper right corners.
 
 
-# In progress ([#52])
+# In progress
 Currently, we are working on implementing interpolation as an option for the
 user [#52].
 
