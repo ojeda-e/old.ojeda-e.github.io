@@ -122,10 +122,17 @@ curv_lower_leaflet = MembraneCurvature(u, select='resid 1024-2046 and name PO4',
 
 {% endhighlight %}
 
-In the example above, we use the selection `"resid 103-1023 and name PO4"` as an
+In the example above, we use two files included in the MembraneCurvature tests:
+`MEMB_GRO` and `XTC_GRO`, which comprises a membrane of lipid composition 
+<span style="color:#92ad6a">POPC:POPE</span><span style="color:grey">:CHOL</span>, in a 
+<span style="color:#92ad6a">5:4</span><span style="color:grey">:1</span> ratio:
+
+<img src="../../assets/images/movie.gif" width="800" height="400" /> 
+
+We use the selection <span style="color:#92ad6a">`"resid 103-1023 and name PO4"`</span> as an
 `AtomGroup` of reference to derive the surface associated to the upper leaflet.
 Similarly, we derive the surface from the lower leaflet with the `AtomGroup`
-defined by the selection `"resid 1024-2046 and name PO4"`. In this example,
+defined by the selection <span style="color:#92ad6a">`"resid 1024-2046 and name PO4"`</span> . In this example,
 `PO4` is the name of the phospholipid head groups.
 
 After running MembraneCurvature, the calculated values of the derived surface
