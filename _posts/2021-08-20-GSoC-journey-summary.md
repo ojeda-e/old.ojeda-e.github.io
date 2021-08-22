@@ -72,9 +72,18 @@ are stored in the `Results` attribute. This makes AnalysisBase the most
 fundamental part of the MembraneCurvature analysis. With the MembraneCurvature
 [AnalysisBase], we can perform multiframe and average-over-frame analysis.
 
-We also added [coordinate wrapping](https://github.com/MDAnalysis/membrane-curvature/blob/4bb851efdeaaeb894b7c354fd019f5f6a97079de/membrane_curvature/base.py#L172) to our Analysis base, which
-enables users to run MembraneCurvature with all atoms in the primary unit cell [#48].
-Having an option to wrap coordinates is particularly useful when we want to calculate curvature with elements in the `AtomGroup` that may fall outside the boundaries of the grid.
+We also added [coordinate
+wrapping](https://github.com/MDAnalysis/membrane-curvature/blob/4bb851efdeaaeb894b7c354fd019f5f6a97079de/membrane_curvature/base.py#L172)
+to our Analysis base, which enables users to run MembraneCurvature with all
+atoms in the primary unit cell [#48]. Having an option to wrap coordinates is
+particularly useful when we want to calculate curvature with elements in the
+`AtomGroup` that may fall outside the boundaries of the grid.
+
+With PR [#48], we also achieved a significant milestone: reaching [100% code
+coverage](https://app.codecov.io/gh/MDAnalysis/membrane-curvature/compare/48/diff#D2)
+in MembraneCurvature. In other words, 100% coverage meand that every line of
+code included was executed by [pytest], our test suite, to check that our code works as it
+should.
 
 ## Documentation ([#57], [#62], [#64], [#69])
 One of the strongest motivations to contribute an [MDAnalysis] 
@@ -200,7 +209,7 @@ example considered here, the contour plot of mean curvature indicates:
   the corner of the membrane, in particular bottom left and upper right corners.
 
 
-# In progress
+# In progress ([#52])
 Currently, we are working on implementing interpolation as an option for the
 user [#52].
 
@@ -214,7 +223,6 @@ curvature, which may result in meaningless output.
 By adding an optional interpolation, we will be able to patch up undefined values 
 in bins inside the embedded element (i.e. protein). With this improvement, calculation
 of membrane curvature won't be hamstrung by the presence of undefined values in the grid.
-
 
 # What's next?
 There is always room for improvement, and MembraneCurvature is not an exception.
@@ -241,7 +249,10 @@ of incredibly talented people:
 discussions and provided valuable insights. 
 <br> Thanks for all your valuable lessons. 
 
-MembraneCurvature has launched! 🚀
+MembraneCurvature has launched! 🚀 <br>
+<a href="https://github.com/MDAnalysis/membrane-curvature" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">MembraneCurvature</span></a>
+
+
 
 ---
 [#9]: https://github.com/MDAnalysis/membrane-curvature/pull/9
@@ -273,3 +284,4 @@ MembraneCurvature has launched! 🚀
 [`_single_frame()`]: https://github.com/MDAnalysis/membrane-curvature/blob/4bb851efdeaaeb894b7c354fd019f5f6a97079de/membrane_curvature/base.py#L170
 [`_prepare()`]: https://github.com/MDAnalysis/membrane-curvature/blob/4bb851efdeaaeb894b7c354fd019f5f6a97079de/membrane_curvature/base.py#L158
 [imshow]: https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.imshow.html
+[pytest]: https://docs.pytest.org/en/6.2.x/
