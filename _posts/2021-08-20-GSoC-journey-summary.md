@@ -158,7 +158,7 @@ gauss_upper = curv_upper_leaflet.results.average_gaussian
 To visualize the results from `MembraneCurvature.run()`, we can use [contourf] from Matplotlib. 
 For example, here is the plot of the averaged results for the upper leaflet using contours:
 
-<img src = "../../assets/images/results.png" alt = "contours"
+<img src = "../../assets/images/results.png" alt = "results"
 width = "1050"/>
 
 
@@ -242,7 +242,8 @@ Participating in GSoC with MDAnalysis has been a unique experience. I had the
 opportunity to learn best practices in software development mentored by a group
 of incredibly talented people:
 [@lilywang](https://github.com/lilyminium),
-[@IAlibay](https://github.com/IAlibay), and
+[@IAlibay](https://github.com/IAlibay), 
+[@fiona-naughton](https://github.com/fiona-naughton), and
 [@orbeckst](https://github.com/orbeckst). I also would like to thank
 [@richardjgowers](https://github.com/richardjgowers) and 
 [@tylerjereddy](https://github.com/tylerjereddy) from the MDA community, who participated in our
