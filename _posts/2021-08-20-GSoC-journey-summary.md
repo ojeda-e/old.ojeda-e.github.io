@@ -81,8 +81,8 @@ particularly useful when we want to calculate curvature with elements in the
 
 With PR [#48], we also achieved a significant milestone: reaching [100% code
 coverage](https://app.codecov.io/gh/MDAnalysis/membrane-curvature/compare/48/diff#D2)
-in MembraneCurvature. In other words, 100% coverage meand that every line of
-code included was executed by [pytest], our test suite, to check that our code works as it
+in MembraneCurvature. 100% coverage means that every line of
+code included was executed by [pytest], our test suite, to check that the code works as it
 should.
 
 ## Documentation ([#57], [#62], [#64], [#69])
